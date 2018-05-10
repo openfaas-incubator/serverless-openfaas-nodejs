@@ -1,7 +1,7 @@
 service: hello-world
 
 provider:
-  name: openfaas
+  name: faas
   runtime: node
   gateway: http://127.0.0.1:8080
 
