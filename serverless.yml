@@ -1,15 +1,14 @@
-service: hello-world
+service: openfaas-hello-world
 
 provider:
   name: faas
-  runtime: node
   gateway: http://127.0.0.1:8080
 
 functions:
   hello-world:
-    handler: ./function
-    image: hello-world:0.1
     lang: node
+    handler: ./hello-world
+    image: hello-world:0.1
 
 plugins:
   - serverless-openfaas
